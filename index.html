@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Je wilt toch niet werken bij Unilever?</title>
+<meta name="description" content="Wie wil er nou werken voor een bedrijf dat winst belangrijker vindt dan een leefbare planeet? Een satirische kijk op Unilever en de afgeschaalde duurzaamheidsdoelen.">
+<meta property="og:title" content="Je wilt toch niet werken bij Unilever?">
+<meta property="og:description" content="Wie wil er nou werken voor een bedrijf dat winst belangrijker vindt dan een leefbare planeet?">
+<meta property="og:image" content="https://werkenbijunilever.nl/assets/cartoon.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
+<style>
+  :root {
+    --bg: #f6f4ef;
+    --ink: #14130f;
+    --muted: #5d5a50;
+    --card: #ffffff;
+    --line: #dcd8cc;
+    --accent: #c2410c;
+    --good: #166534;
+    --shadow: 0 1px 2px rgba(0,0,0,.06), 0 12px 32px rgba(0,0,0,.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #11100d;
+      --ink: #f1eee6;
+      --muted: #a8a496;
+      --card: #1b1a16;
+      --line: #34322a;
+      --accent: #fb923c;
+      --good: #4ade80;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.4);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { width: min(1080px, 100% - 32px); margin-inline: auto; }
+
+  header.top {
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    padding: 20px 0; font-size: .95rem;
+  }
+  header.top .brand { font-weight: 700; text-decoration: none; }
+  header.top nav { display: flex; gap: 20px; }
+  header.top nav a { text-decoration: none; color: var(--muted); }
+  header.top nav a:hover { color: var(--ink); }
+
+  .hero { padding: clamp(40px, 9vw, 110px) 0 clamp(32px, 6vw, 64px); }
+  .eyebrow {
+    display: inline-block; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 700; margin-bottom: 18px;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 8vw, 5.6rem);
+    line-height: 1.02; letter-spacing: -.02em; margin: 0 0 24px; max-width: 14ch;
+  }
+  h1 s { text-decoration-thickness: .07em; text-decoration-color: var(--accent); color: var(--muted); }
+  .lead { font-size: clamp(1.1rem, 2.4vw, 1.5rem); color: var(--muted); max-width: 40ch; margin: 0 0 32px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  button.apply, a.btn {
+    font: inherit; font-weight: 600; cursor: pointer; text-decoration: none;
+    background: var(--ink); color: var(--bg); border: 0; border-radius: 999px; padding: 14px 26px;
+    transition: transform .15s ease;
+  }
+  button.apply:hover, a.btn:hover { transform: translateY(-2px); }
+  a.ghost { color: var(--muted); font-weight: 500; }
+  #reply { min-height: 1.6em; margin: 14px 0 0; color: var(--accent); font-weight: 600; }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 8px 0 72px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 24px; box-shadow: var(--shadow); }
+  .stat b { display: block; overflow-wrap: anywhere; font-family: Georgia, serif; font-size: 2.4rem; line-height: 1.1; }
+  .stat span { color: var(--muted); font-size: .95rem; }
+
+  section { padding: 24px 0 72px; }
+  h2 { font-family: Georgia, serif; font-size: clamp(1.7rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 12px; letter-spacing: -.01em; }
+  .sub { color: var(--muted); max-width: 56ch; margin: 0 0 32px; }
+
+  .figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; align-items: start; }
+  figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); }
+  figure img { display: block; width: 100%; height: auto; }
+  figcaption { padding: 16px 20px 20px; font-size: .9rem; color: var(--muted); border-top: 1px solid var(--line); }
+
+  .credit { font-size: .8rem; }
+  figcaption a, .sources a { text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  .sources { padding-left: 1.2em; color: var(--muted); max-width: 70ch; }
+  .sources li { margin-bottom: 8px; }
+  .vacancies { display: grid; gap: 12px; }
+  .job { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center;
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; }
+  .job h3 { margin: 0; font-size: 1.05rem; }
+  .job p { margin: 2px 0 0; color: var(--muted); font-size: .92rem; }
+  .tag { font-size: .78rem; font-weight: 700; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+  .tag.hot { color: var(--accent); border-color: var(--accent); }
+
+  .alt { background: var(--card); border: 1px solid var(--line); border-radius: 28px; padding: clamp(24px, 5vw, 48px); box-shadow: var(--shadow); }
+  .alt ul { margin: 16px 0 0; padding-left: 1.2em; color: var(--muted); }
+  .alt li { margin-bottom: 8px; }
+  .alt strong { color: var(--good); }
+
+  footer { border-top: 1px solid var(--line); padding: 32px 0 56px; color: var(--muted); font-size: .85rem; }
+  footer p { max-width: 80ch; margin: 0 0 10px; }
+
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    button.apply:hover, a.btn:hover { transform: none; }
+  }
+  @media (max-width: 560px) { header.top nav { display: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#">Je wilt toch niet werken bij Unilever?</a>
+    <nav>
+      <a href="#bewijs">Het bewijs</a>
+      <a href="#bronnen">Bronnen</a>
+      <a href="#vacatures">Vacatures</a>
+      <a href="#alternatief">Alternatief</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <span class="eyebrow">Vacatures · 0 openstaand · 1 aandeelhouder tevreden</span>
+      <h1>Niet werken bij <s>Unilever</s></h1>
+      <p class="lead">Wie wil er nou werken voor een bedrijf dat winst belangrijker vindt dan een leefbare planeet?</p>
+      <div class="cta">
+        <button class="apply" id="apply" type="button">Solliciteer nu</button>
+        <a class="ghost" href="#bewijs">Eerst even het bewijs bekijken</a>
+      </div>
+      <p id="reply" role="status" aria-live="polite"></p>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><b>22 april</b><span>Unilever maakt bekend duurzaamheidsdoelen af te schalen.</span></div>
+      <div class="stat"><b>↑ koers</b><span>De koers veert op, zie de grafiek hieronder.</span></div>
+      <div class="stat"><b>↓ ambitie</b><span>De duurzaamheidsdoelen gaan de andere kant op.</span></div>
+    </div>
+
+    <section id="bewijs">
+      <h2 class="reveal">Het bewijs</h2>
+      <p class="sub reveal">Twee plaatjes zeggen meer dan een duurzaamheidsrapport van tweehonderd pagina's.</p>
+      <div class="figures">
+        <figure class="reveal">
+          <img src="assets/chart.jpg" alt="Grafiek uit een krant: Aandeel Unilever leeft op na koerswijziging. Na de bekendmaking op 22 april van het afschalen van duurzaamheidsdoelen stijgt de koers van rond 45 naar boven 53 euro." width="816" height="1024" loading="lazy">
+          <figcaption>Aandeel Unilever leeft op na koerswijziging. De koers stijgt nadat bekend wordt dat de duurzaamheidsdoelen worden afgeschaald.<br><span class="credit">Bron: grafiek uit <a href="https://www.volkskrant.nl/economie/bij-unilever-zouden-groen-en-groei-samengaan-nu-gaat-groei-toch-voor~bbc97391/" rel="noopener">de Volkskrant</a> (<a href="#bronnen">zie bronnen</a>). Context: <a href="https://www.bloomberg.com/news/features/2024-04-19/esg-unilever-scales-back-sustainability-goals" rel="noopener">Bloomberg</a>, <a href="https://www.just-food.com/news/unilever-dials-down-sustainability-targets-for-more-focused-green-strategy" rel="noopener">Just Food</a>.</span></figcaption>
+        </figure>
+        <figure class="reveal">
+          <img src="assets/cartoon.jpg" alt="Cartoon van Tom Toro: een man in een gescheurd pak vertelt bij een kampvuur in een verwoest landschap aan kinderen: Yes, the planet got destroyed. But for a beautiful moment in time we created a lot of value for shareholders." width="1066" height="1086" loading="lazy">
+          <figcaption>Cartoon van Tom Toro, oorspronkelijk verschenen in The New Yorker (2012).<br><span class="credit">Bron: © Tom Toro / The New Yorker. Achtergrond: <a href="https://www.climatemuseum.org/interview-with-tom-toro" rel="noopener">interview met Tom Toro</a>.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="bronnen">
+      <h2 class="reveal">Bronnen</h2>
+      <ul class="sources reveal">
+        <li>Bloomberg, <a href="https://www.bloomberg.com/news/features/2024-04-19/esg-unilever-scales-back-sustainability-goals" rel="noopener">"ESG: Unilever scales back sustainability goals"</a> (19 april 2024).</li>
+        <li>Just Food, <a href="https://www.just-food.com/news/unilever-dials-down-sustainability-targets-for-more-focused-green-strategy" rel="noopener">"Unilever dials down sustainability targets for more focused green strategy"</a>.</li>
+        <li>Planet Tracker, <a href="https://planet-tracker.org/?p=21351" rel="noopener">"Unilever: A Pivotal Moment"</a>.</li>
+        <li>Climate Museum, <a href="https://www.climatemuseum.org/interview-with-tom-toro" rel="noopener">interview met cartoonist Tom Toro</a>.</li>
+        <li>de Volkskrant, <a href="https://www.volkskrant.nl/economie/bij-unilever-zouden-groen-en-groei-samengaan-nu-gaat-groei-toch-voor~bbc97391/" rel="noopener">"Bij Unilever zouden groen en groei samengaan, nu gaat groei toch voor"</a>. Bron van de grafiek "Aandeel Unilever leeft op na koerswijziging".</li>
+      </ul>
+    </section>
+
+    <section id="vacatures">
+      <h2 class="reveal">Openstaande vacatures</h2>
+      <p class="sub reveal">Je zou het bijna overwegen. Bijna.</p>
+      <div class="vacancies reveal">
+        <div class="job"><div><h3>Manager Duurzaamheid</h3><p>Taak: de doelen in de nieuwsbrief houden, niet in de planning.</p></div><span class="tag hot">Krimpt</span></div>
+        <div class="job"><div><h3>Senior Aandeelhouderswaarde</h3><p>Taak: zorgen dat de grafiek omhoog gaat. Hoe, maakt niet uit.</p></div><span class="tag hot">Groeit</span></div>
+        <div class="job"><div><h3>Greenwashing Specialist</h3><p>Taak: een blad boompje op de verpakking. Ervaring met woorden als "bewust" is een pre.</p></div><span class="tag">Vacature vervuld</span></div>
+      </div>
+    </section>
+
+    <section id="alternatief">
+      <div class="alt reveal">
+        <h2>Wat dan wel?</h2>
+        <p class="sub">Werk voor een organisatie die haar duurzaamheidsdoelen niet inlevert zodra de beurs even trekt.</p>
+        <ul>
+          <li>Kijk of de doelen gehaald zijn, niet of ze gehaald <em>worden</em>.</li>
+          <li>Vraag bij het sollicitatiegesprek wat er met de ambities is gebeurd na het laatste kwartaalcijfer.</li>
+          <li><strong>Kies een werkgever waar je over tien jaar nog trots op kunt zijn.</strong></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Deze website is een persoonlijke, satirische meningsuiting en is niet gelieerd aan Unilever. Er zijn geen echte vacatures. Voor echte vacatures ga je naar de officiële carrièresite van het bedrijf.</p>
+    <p>Beeldmateriaal is afkomstig van derden en wordt getoond ter illustratie van de mening op deze pagina. Rechthebbenden die bezwaar hebben kunnen contact opnemen via de eigenaar van de domeinnaam.</p>
+  </footer>
+</div>
+
+<script>
+  const replies = [
+    "Echt waar? Denk er nog eens over na.",
+    "Heb je de grafiek hierboven wel goed bekeken?",
+    "Sollicitatie niet verzonden. Je moraal vroeg om uitstel.",
+    "Het aandeel zegt dank, de aarde niet.",
+    "Probeer eens een werkgever met doelen die blijven staan."
+  ];
+  let i = 0;
+  const out = document.getElementById("reply");
+  document.getElementById("apply").addEventListener("click", () => {
+    out.textContent = replies[i++ % replies.length];
+  });
+
+  const io = "IntersectionObserver" in window
+    ? new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .12 })
+    : null;
+  document.querySelectorAll(".reveal").forEach(el => io ? io.observe(el) : el.classList.add("in"));
+</script>
+</body>
+</html>
